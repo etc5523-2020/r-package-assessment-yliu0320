@@ -13,7 +13,6 @@
 #' - **latitude**: the latitude of the state
 #' - **longitude**: the longitude of the state
 #'
-#' @import tibble
 #' 
 #' @source [COVID-19 Data Hub](https://covid19datahub.io/articles/data.html)
 #' 
