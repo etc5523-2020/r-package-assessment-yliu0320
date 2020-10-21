@@ -46,4 +46,6 @@ coronavirus_region
 #> 10 Austra~ Sout~ 2020-01-21         0         0      0               0
 #> # ... with 2,110 more rows, and 2 more variables: daily_recovered <dbl>,
 #> #   daily_deaths <dbl>
+n_states(coronavirus_region)
+#> [1] 8
 ```

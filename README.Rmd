@@ -36,5 +36,6 @@ This is a basic example which shows you how to solve a common problem:
 library(AustraliaCOVID19)
 library(tibble)
 coronavirus_region
+n_states(coronavirus_region)
 ```
 
