@@ -13,8 +13,9 @@ a tibble with 2120 observations and 8 variables:
 \item \strong{confirmed}: the cumulative number of the confirmed cases
 \item \strong{recovered}: the cumulative number of the recovered cases
 \item \strong{deaths}: the cumulative number of the death cases
-\item \strong{latitude}: the latitude of the state
-\item \strong{longitude}: the longitude of the state
+\item \strong{daily_confirmed}: the daily number of the confirmed cases
+\item \strong{daily_recovered}: the daily number of the recovered cases
+\item \strong{daily_deaths}: the daily number of the death cases
 }
 }
 \source{

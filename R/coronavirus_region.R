@@ -10,8 +10,9 @@
 #' - **confirmed**: the cumulative number of the confirmed cases
 #' - **recovered**: the cumulative number of the recovered cases
 #' - **deaths**: the cumulative number of the death cases
-#' - **latitude**: the latitude of the state
-#' - **longitude**: the longitude of the state
+#' - **daily_confirmed**: the daily number of the confirmed cases
+#' - **daily_recovered**: the daily number of the recovered cases
+#' - **daily_deaths**: the daily number of the death cases
 #'
 #' 
 #' @source [COVID-19 Data Hub](https://covid19datahub.io/articles/data.html)

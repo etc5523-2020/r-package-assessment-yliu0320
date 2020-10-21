@@ -9,7 +9,9 @@
 
 The goal of AustraliaCOVID19 is to see the coronavirus data of daily
 cases and cumulative cases of different types in different states of
-Australia between 2020-01-12 to 2020-10-02.
+Australia between 2020-01-12 to 2020-10-02.Also the shiny app in this
+package will give you the whole information about the data with the
+interactive plots and table.
 
 ## Installation
 

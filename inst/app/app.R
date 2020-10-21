@@ -7,12 +7,6 @@ library(readr)
 library(kableExtra)
 theme_set(theme_classic())
 
-coronavirus_region <- read_csv("coronavirus_region.csv")
-coronavirus_region <- coronavirus_region%>%
-  filter(administrative_area_level_1=="Australia")%>%
-  select("administrative_area_level_1","administrative_area_level_2","date","confirmed","recovered","deaths","latitude","longitude")%>%
-  rename(Country=administrative_area_level_1,State=administrative_area_level_2)
-coronavirus_region$date <- as.Date(coronavirus_region$date)
 
 ui <- fluidPage(br(),
                 h1("An App about Australia Coronavirus",align="center"),
@@ -75,12 +69,7 @@ server <- function(input, output,session) {
   
   output$dailyplot_covid19_AUS <- renderPlotly({
     temp1 <- coronavirus_region[(coronavirus_region$date >= as.Date(input$Date[1])) & (coronavirus_region$date <= as.Date(input$Date[2])), ]
-    daily_data <- temp1 %>%
-      group_by(State) %>%
-      mutate(daily_confirmed = confirmed - lag(confirmed),
-             daily_recovered=recovered-lag(recovered),
-             daily_deaths=deaths-lag(deaths))
-    daily_data[is.na(daily_data)]<- 0
+    daily_data <- temp1 
     
     daily_data %>%
       filter(State == input$State)%>%
