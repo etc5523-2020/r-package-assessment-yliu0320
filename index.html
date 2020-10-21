@@ -64,7 +64,7 @@
 <a href="#australiacovid19" class="anchor"></a>AustraliaCOVID19</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>The goal of AustraliaCOVID19 is to see the coronavirus data of daily cases and cumulative cases of different types in different states of Australia between 2020-01-12 to 2020-10-02.Also the shiny app in this package will give you the whole information about the data with the interactive plots and table.</p>
+<p>The goal of AustraliaCOVID19 is to see the coronavirus data of daily cases and cumulative cases of different types in different states of Australia between 2020-01-12 to 2020-10-02.Besides,the shiny app in this package will give you the whole information about the data with the interactive plots and table.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -81,20 +81,21 @@
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">AustraliaCOVID19</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span>
 <span class="va">coronavirus_region</span>
-<span class="co">#&gt; # A tibble: 2,120 x 8</span>
-<span class="co">#&gt;    Country   State        date     confirmed recovered deaths latitude longitude</span>
-<span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;        &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;</span>
-<span class="co">#&gt;  1 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.</span>
-<span class="co">#&gt;  2 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.</span>
-<span class="co">#&gt;  3 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.</span>
-<span class="co">#&gt;  4 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.</span>
-<span class="co">#&gt;  5 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.</span>
-<span class="co">#&gt;  6 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.</span>
-<span class="co">#&gt;  7 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.</span>
-<span class="co">#&gt;  8 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.</span>
-<span class="co">#&gt;  9 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.</span>
-<span class="co">#&gt; 10 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.</span>
-<span class="co">#&gt; # ... with 2,110 more rows</span></pre></div>
+<span class="co">#&gt; # A tibble: 2,120 x 9</span>
+<span class="co">#&gt;    Country State date       confirmed recovered deaths daily_confirmed</span>
+<span class="co">#&gt;    &lt;chr&gt;   &lt;chr&gt; &lt;date&gt;         &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;           &lt;dbl&gt;</span>
+<span class="co">#&gt;  1 Austra~ Sout~ 2020-01-12         0         0      0               0</span>
+<span class="co">#&gt;  2 Austra~ Sout~ 2020-01-13         0         0      0               0</span>
+<span class="co">#&gt;  3 Austra~ Sout~ 2020-01-14         0         0      0               0</span>
+<span class="co">#&gt;  4 Austra~ Sout~ 2020-01-15         0         0      0               0</span>
+<span class="co">#&gt;  5 Austra~ Sout~ 2020-01-16         0         0      0               0</span>
+<span class="co">#&gt;  6 Austra~ Sout~ 2020-01-17         0         0      0               0</span>
+<span class="co">#&gt;  7 Austra~ Sout~ 2020-01-18         0         0      0               0</span>
+<span class="co">#&gt;  8 Austra~ Sout~ 2020-01-19         0         0      0               0</span>
+<span class="co">#&gt;  9 Austra~ Sout~ 2020-01-20         0         0      0               0</span>
+<span class="co">#&gt; 10 Austra~ Sout~ 2020-01-21         0         0      0               0</span>
+<span class="co">#&gt; # ... with 2,110 more rows, and 2 more variables: daily_recovered &lt;dbl&gt;,</span>
+<span class="co">#&gt; #   daily_deaths &lt;dbl&gt;</span></pre></div>
 </div>
 </div>
   </div>
