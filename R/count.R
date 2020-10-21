@@ -2,6 +2,8 @@
 #'
 #' @param data A dataset containing a `State` column.
 #' 
+#' @examples 
+#' n_states(coronavirus_region)
 #' 
 #' @export
 n_states <- function(data) {

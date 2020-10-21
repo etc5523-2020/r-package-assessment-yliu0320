@@ -12,3 +12,7 @@ n_states(data)
 \description{
 Count the number of states in a dataset
 }
+\examples{
+n_states(coronavirus_region)
+
+}
