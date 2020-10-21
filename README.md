@@ -5,12 +5,14 @@
 
 <!-- badges: start -->
 
+[![R build
+status](https://github.com/etc5523-2020/r-package-assessment-yliu0320/workflows/R-CMD-check/badge.svg)](https://github.com/etc5523-2020/r-package-assessment-yliu0320/actions)
 <!-- badges: end -->
 
 The goal of AustraliaCOVID19 is to see the coronavirus data of daily
 cases and cumulative cases of different types in different states of
 Australia between 2020-01-12 to 2020-10-02.Besides,the shiny app in this
-package will give you the whole information about the data with the
+package will give people the whole information about the data with the
 interactive plots and table.
 
 ## Installation
