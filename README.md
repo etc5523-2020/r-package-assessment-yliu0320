@@ -9,7 +9,7 @@
 
 The goal of AustraliaCOVID19 is to see the coronavirus data of daily
 cases and cumulative cases of different types in different states of
-Australia between 2020-01-12 to 2020-10-02.Also the shiny app in this
+Australia between 2020-01-12 to 2020-10-02.Besides,the shiny app in this
 package will give you the whole information about the data with the
 interactive plots and table.
 
@@ -31,18 +31,19 @@ This is a basic example which shows you how to solve a common problem:
 library(AustraliaCOVID19)
 library(tibble)
 coronavirus_region
-#> # A tibble: 2,120 x 8
-#>    Country   State        date     confirmed recovered deaths latitude longitude
-#>    <chr>     <chr>        <chr>        <dbl>     <dbl>  <dbl>    <dbl>     <dbl>
-#>  1 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.
-#>  2 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.
-#>  3 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.
-#>  4 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.
-#>  5 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.
-#>  6 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.
-#>  7 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.
-#>  8 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.
-#>  9 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.
-#> 10 Australia South Austr~ 2020-01~         0         0      0    -34.9      139.
-#> # ... with 2,110 more rows
+#> # A tibble: 2,120 x 9
+#>    Country State date       confirmed recovered deaths daily_confirmed
+#>    <chr>   <chr> <date>         <dbl>     <dbl>  <dbl>           <dbl>
+#>  1 Austra~ Sout~ 2020-01-12         0         0      0               0
+#>  2 Austra~ Sout~ 2020-01-13         0         0      0               0
+#>  3 Austra~ Sout~ 2020-01-14         0         0      0               0
+#>  4 Austra~ Sout~ 2020-01-15         0         0      0               0
+#>  5 Austra~ Sout~ 2020-01-16         0         0      0               0
+#>  6 Austra~ Sout~ 2020-01-17         0         0      0               0
+#>  7 Austra~ Sout~ 2020-01-18         0         0      0               0
+#>  8 Austra~ Sout~ 2020-01-19         0         0      0               0
+#>  9 Austra~ Sout~ 2020-01-20         0         0      0               0
+#> 10 Austra~ Sout~ 2020-01-21         0         0      0               0
+#> # ... with 2,110 more rows, and 2 more variables: daily_recovered <dbl>,
+#> #   daily_deaths <dbl>
 ```
