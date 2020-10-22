@@ -1,0 +1,96 @@
+---
+title: "An App about Australia Coronavirus"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{An App about Australia Coronavirus}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width=6
+)
+```
+
+```{r setup}
+library(AustraliaCOVID19)
+```
+
+# The App Introduction
+
+The shiny app in the AustraliaCOVID19 package provides the coronavirus data of daily cases and cumulative cases of different types in different states of Australia between 2020-01-12 to 2020-10-02 using the interactive plots and table.[This is the link of my shiny app.](https://yiwen-liu.shinyapps.io/app_about_coronavirus/)
+
+# Launch the App
+
+After people install the package from github to their local rstudio,they should load the package first and then use the function "launch_app" to get the shiny app.
+
+```{r}
+# install.packages("devtools")
+# devtools::install_github("etc5523-2020/r-package-assessment-yliu0320")
+# library(AustraliaCOVID19)
+# launch_app()
+```
+
+# Using Instructions
+
+When you run this app,you would find a brief introduction in the "About" section at the top of the page.
+
+You can choose the date range between 2020-01-12 to 2020-10-02 to see the coronavirus data of daily cases and cumulative cases of different types in different states of Australia.
+
+## Daily Plot
+
+Once you select one state in the list,you would get an interactive plot about the daily cases of different types in the related state.The date of the plot is between the date range you choose at first.
+
+<br>
+
+```{r daily_plot,echo=FALSE,message=FALSE,warning=FALSE}
+library(dplyr)
+library(plotly)
+coronavirus_region %>%
+  filter(State=="South Australia")%>%
+   plot_ly(x = ~ date,
+           y = ~ daily_confirmed,
+           type = "scatter",
+           name="Daily confirmed",
+           fillcolor="blue",
+           alpha=0.5)%>%
+  add_trace(y = ~ daily_deaths, 
+            name = "Daily deaths",
+            fillcolor = "red") %>%
+  add_trace(y = ~daily_recovered, 
+            name = "Daily recovered", 
+            fillcolor = "green") %>%
+  layout(title = "Daily Distribution of Covid19 Cases in South Australia",
+         legend = list(x = 0.7, y = 0.9),
+         yaxis = list(title = "Number of Cases"))
+```
+<br>
+
+## Cumulative Plot and Table
+
+Once you select one type in the list,you would get an interactive plot and a table,which both change according to the date range you choose at first and the type you select.The table summarizes the data which is from the last day you choose in the date range.The plot and table display the cumulative cases of the related type in different states of Australia.
+
+<br>
+
+```{r cumulative_plot,echo=FALSE,message=FALSE,warning=FALSE}
+plot_region <- coronavirus_region%>%
+  group_by(State)%>%
+  ggplot()+
+  geom_point(data=coronavirus_region,aes(x=date,y=deaths,color=State))+
+  ggtitle("The Cumulative Number of Death Cases in Different States of Australia")
+ggplotly(plot_region)
+```
+
+```{r cumulative_table,echo=FALSE,message=FALSE,warning=FALSE}
+library(kableExtra)
+coronavirus_region%>%
+  filter(date=="2020-10-02")%>%
+  select("State","date","confirmed","recovered","deaths")%>%
+  arrange(State)%>%
+  kable(align="c",caption="Number of confirmed/deaths/recovered in Australia(from 2020.01.12 to 2020.10.02)") %>% 
+  kable_styling()
+```
+
