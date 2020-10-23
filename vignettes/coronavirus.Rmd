@@ -40,7 +40,7 @@ When you run this app,you would find a brief introduction in the "About" section
 
 You can choose the date range between 2020-01-12 to 2020-10-02 to see the coronavirus data of daily cases and cumulative cases of different types in different states of Australia.
 
-## Daily Plot
+## Daily Case Plot
 
 Once you select one state in the list,you would get an interactive plot about the daily cases of different types in the related state.The date of the plot is between the date range you choose at first.
 
@@ -69,7 +69,7 @@ coronavirus_region %>%
 ```
 <br>
 
-## Cumulative Plot and Table
+## Cumulative Case Plot and Table
 
 Once you select one type in the list,you would get an interactive plot and a table,which both change according to the date range you choose at first and the type you select.The table summarizes the data which is from the last day you choose in the date range.The plot and table display the cumulative cases of the related type in different states of Australia.
 

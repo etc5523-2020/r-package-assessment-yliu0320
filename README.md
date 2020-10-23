@@ -27,7 +27,7 @@ devtools::install_github("etc5523-2020/r-package-assessment-yliu0320")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows the content of data in the package.
 
 ``` r
 library(AustraliaCOVID19)

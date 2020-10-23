@@ -75,9 +75,7 @@ server <- function(input, output,session) {
   
   output$dailyplot_covid19_AUS <- renderPlotly({
     temp1 <- coronavirus_region[(coronavirus_region$date >= as.Date(input$date[1])) & (coronavirus_region$date <= as.Date(input$date[2])), ]
-    
-      
-    
+
     temp1 %>%
       filter(State == input$state)%>%
       plot_ly(x = ~ date,
