@@ -1,16 +1,29 @@
-Package: yourPkg
-Title: What the Package Does (One Line, Title Case)
+Package: AustraliaCOVID19
+Title: Provide the Coronavirus Data in Australia
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Yiwen",
+           family = "Liu",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "yliu0320@student.monash.edu")
+Description: Provide the coronavirus data of daily cases and cumulative cases of different types in different states of Australia between 2020-01-12 to 2020-10-02.Also the shiny app in this package will display the whole information about the data with the interactive plots and table.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+URL: https://github.com/etc5523-2020/r-package-assessment-yliu0320
+BugReports: https://github.com/etc5523-2020/r-package-assessment-yliu0320/issues
+Imports: 
+    shiny,
+    tibble,
+    dplyr
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown,
+    plotly,
+    kableExtra
+Depends: 
+    R (>= 2.10)
+VignetteBuilder: knitr

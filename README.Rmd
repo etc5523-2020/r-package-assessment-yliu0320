@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# AustraliaCOVID19
+
+<!-- badges: start -->
+[![R build status](https://github.com/etc5523-2020/r-package-assessment-yliu0320/workflows/R-CMD-check/badge.svg)](https://github.com/etc5523-2020/r-package-assessment-yliu0320/actions)
+<!-- badges: end -->
+
+The goal of AustraliaCOVID19 is to see the coronavirus data of daily cases and cumulative cases of different types in different states of Australia between 2020-01-12 to 2020-10-02.Besides,the shiny app in this package will give people the whole information about the data with the interactive plots and table.
+
+## Installation
+
+You can install the AustraliaCOVID19 from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("etc5523-2020/r-package-assessment-yliu0320")
+```
+## Example
+
+This is a basic example which shows the content of data in the package. 
+
+```{r example}
+library(AustraliaCOVID19)
+library(tibble)
+coronavirus_region
+n_states(coronavirus_region)
+```
+
