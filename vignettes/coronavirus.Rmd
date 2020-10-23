@@ -25,7 +25,7 @@ The shiny app in the AustraliaCOVID19 package provides the coronavirus data of d
 
 # Launch the App
 
-After people install the package from github to their local rstudio,they should load the package first and then use the function "launch_app" to get the shiny app.
+After you install the package from github to your local rstudio,you should load the package first and then use the function "launch_app" to get the shiny app.
 
 ```{r}
 # install.packages("devtools")
@@ -90,7 +90,7 @@ coronavirus_region%>%
   filter(date=="2020-10-02")%>%
   select("State","date","confirmed","recovered","deaths")%>%
   arrange(State)%>%
-  kable(align="c",caption="Number of confirmed/deaths/recovered in Australia(from 2020.01.12 to 2020.10.02)") %>% 
+  kable(align="c",caption="Cumulative Cases of Different Types in Australia(from 2020.01.12 to 2020.10.02)") %>% 
   kable_styling()
 ```
 

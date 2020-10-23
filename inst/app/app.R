@@ -16,12 +16,7 @@ ui <- fluidPage(br(),
                 br(),
                 p("You can choose the date range between 2020-01-12 to 2020-10-02 to see the coronavirus data in Australia."),
                 
-                dateRangeInput(
-                  "date", 
-                  label = "Date", 
-                  start = "2020-01-12",
-                  end = '2020-10-02'
-                ),
+                dateselection("2020-01-12","2020-10-02"),
                 br(),
                 
                 sidebarLayout(

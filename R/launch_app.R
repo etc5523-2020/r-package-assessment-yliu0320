@@ -6,7 +6,7 @@
 launch_app <- function() {
   appDir <- system.file("app", package = "AustraliaCOVID19")
   if (appDir == "") {
-    stop("Could not find example directory. Try re-installing `AustraliaCOVID19`.", call. = FALSE)
+    stop("Could not find app directory. Try re-installing `AustraliaCOVID19`.", call. = FALSE)
   }
   
   shiny::runApp(appDir, display.mode = "normal")
