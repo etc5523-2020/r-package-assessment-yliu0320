@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Count the number of states in a dataset — n_states • AustraliaCOVID19</title>
+<title>Create a date range input — dateselection • AustraliaCOVID19</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Count the number of states in a dataset — n_states" />
-<meta property="og:description" content="Count the number of states in a dataset" />
+<meta property="og:title" content="Create a date range input — dateselection" />
+<meta property="og:description" content="Create a date range input" />
 
 
 
@@ -114,31 +114,35 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Count the number of states in a dataset</h1>
-    <small class="dont-index">Source: <a href='https://github.com/etc5523-2020/r-package-assessment-yliu0320/blob/master/R/count.R'><code>R/count.R</code></a></small>
-    <div class="hidden name"><code>n_states.Rd</code></div>
+    <h1>Create a date range input</h1>
+    <small class="dont-index">Source: <a href='https://github.com/etc5523-2020/r-package-assessment-yliu0320/blob/master/R/uifunction.R'><code>R/uifunction.R</code></a></small>
+    <div class="hidden name"><code>dateselection.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Count the number of states in a dataset</p>
+    <p>Create a date range input</p>
     </div>
 
-    <pre class="usage"><span class='fu'>n_states</span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>dateselection</span><span class='op'>(</span><span class='va'>starttime</span>, <span class='va'>endtime</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>data</th>
-      <td><p>A dataset containing a <code>State</code> column.</p></td>
+      <th>starttime</th>
+      <td><p>the beginning of the date</p></td>
+    </tr>
+    <tr>
+      <th>endtime</th>
+      <td><p>the end of the date</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>n_states</span><span class='op'>(</span><span class='va'>coronavirus_region</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] 8</div><div class='input'>
-</div></pre>
+    <p>It shows a date range input in shiny app and related interactive plots and table.</p>
+<p>If the input in user interface does not satisfy the condition,the shiny app will not display the plots and table.</p>
+
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
